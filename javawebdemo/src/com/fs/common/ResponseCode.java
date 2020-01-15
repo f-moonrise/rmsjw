@@ -9,6 +9,30 @@ public class ResponseCode<T> {
     private T data;
     private String msg;
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
     //多个构造函数
     private ResponseCode(T data){
         this.status = 200;
@@ -68,5 +92,14 @@ public class ResponseCode<T> {
 
     public static <T> ResponseCode toDefeated(String msg){
         return new ResponseCode(100,msg);
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "status:" + status +
+                ", data:" + data +
+                ", msg:'" + msg + '\'' +
+                '}';
     }
 }

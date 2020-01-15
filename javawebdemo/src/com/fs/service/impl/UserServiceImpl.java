@@ -16,12 +16,13 @@ public class UserServiceImpl implements UserService {
     public ResponseCode<Users> login(String username, String password) {
         Users users = null;
         //非空判断
-        if(username != null || username.equals("")){
+        if(username == null || username.equals("")){
             return ResponseCode.toDefeated("用户名为空");
         }
-        if(password != null || password.equals("")){
+        if(password == null || password.equals("")){
             return ResponseCode.toDefeated("密码为空");
         }
+
         users = ud.selectByUserNameAndPassword(username, password);
         if(users == null){
             return ResponseCode.toDefeated("用户不存在");

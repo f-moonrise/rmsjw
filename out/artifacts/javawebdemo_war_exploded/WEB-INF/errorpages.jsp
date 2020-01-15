@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: 13326
-  Date: 2020/1/14
-  Time: 19:14
+  Date: 2020/1/15
+  Time: 22:33
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="noaccess.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isErrorPage="true" %>
 <html>
 <head>
-    <title>后台首页</title>
+    <title>Title</title>
     <style>
         #left{
             width: 30%;
@@ -32,7 +32,7 @@
     <a href="/product/getall">获取所有商品数据</a>
 </div>
 <div id="right">
-
+    <h1>系统出错了，请联系管理员</h1>
 </div>
 </body>
 </html>

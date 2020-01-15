@@ -1,5 +1,7 @@
 package com.fs.service;
 
+import com.fs.common.ResponseCode;
+
 import java.net.ResponseCache;
 
 /**
@@ -7,5 +9,7 @@ import java.net.ResponseCache;
  * @date 2020/1/14 18:16
  */
 public interface ProductService {
-    ResponseCache getAllProduct();
+    ResponseCode getAllProduct();
+
+    ResponseCode toType(String id);
 }
