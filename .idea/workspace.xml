@@ -1,15 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="84cfc732-0bf9-41a6-a627-b68c3684da24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/resources/c3p0-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/common/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/dao/ProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/pojo/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/pojo/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/pojo/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/utils/C3P0Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/test/DemoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/c3p0-0.9.1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/commons-dbutils-1.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/mysql-connector-java-8.0.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/standard.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/plist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/javawebdemo_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/javawebdemo_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javawebdemo/javawebdemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/javawebdemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javawebdemo/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/web/index.jsp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1W0xW3ITM4TJa11RQTibB01jw7K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/javawebdemo/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.23244782" />
+    <property name="project.structure.side.proportion" value="0.30535454" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Github\rmsjw\javawebdemo\src\com\fs\utils" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fs.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Github\rmsjw\javawebdemo\resources" />
+      <recent name="E:\Github\rmsjw\javawebdemo\web\WEB-INF\lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.DemoTest.test1">
+    <configuration name="DemoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javawebdemo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DemoTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.24" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="javawebdemo:war exploded">
@@ -31,5 +130,46 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DemoTest.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84cfc732-0bf9-41a6-a627-b68c3684da24" name="Default Changelist" comment="" />
+      <created>1578300341391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578300341391</updated>
+      <workItem from="1578300345380" duration="1561000" />
+      <workItem from="1578305903879" duration="1205000" />
+      <workItem from="1578357177754" duration="223000" />
+      <workItem from="1578984728109" duration="8877000" />
+      <workItem from="1579010495230" duration="939000" />
+      <workItem from="1579013565425" duration="3881000" />
+      <workItem from="1579047679723" duration="2382000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
