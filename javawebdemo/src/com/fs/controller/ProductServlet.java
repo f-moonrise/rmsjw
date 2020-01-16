@@ -18,7 +18,7 @@ import java.net.ResponseCache;
  * @author zangye03@gmail.com
  * @date 2020/1/14 18:07
  */
-@WebServlet("/product/*")
+@WebServlet("/backed/product/*")
 public class ProductServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,6 +53,7 @@ public class ProductServlet extends HttpServlet {
     private void totype(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         ResponseCode allProduct = productService.toType(id);
-        response.getWriter().write(allProduct.toString());
+        //把数据转成json格式返回
+        response.getWriter().write(allProduct.getData().toString());
     }
 }

@@ -29,7 +29,7 @@
         <a href="/backed/index/home">回到首页</a>
     </p>
     <h1>欢迎${us.username}登录管理后台</h1>
-    <a href="/product/getall">获取所有商品数据</a>
+    <a href="/backed/product/getall">获取所有商品数据</a>
 </div>
 <div id="right">
     <h1>系统出错了，请联系管理员</h1>
