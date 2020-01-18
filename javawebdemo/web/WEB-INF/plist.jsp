@@ -7,32 +7,39 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="noaccess.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="left.jsp"%>
 <html>
 <head>
     <title>商品列表</title>
-    <style>
-        #left{
-            width: 30%;
-            height: 100%;
-            float: left;
-            background-color: seagreen;
-        }
-        #right{
-            width: 70%;
-            float: right;
-            background-color: salmon;
-        }
-    </style>
+<%--    <style>--%>
+<%--        #left{--%>
+<%--            width: 30%;--%>
+<%--            height: 100%;--%>
+<%--            float: left;--%>
+<%--            background-color: seagreen;--%>
+<%--        }--%>
+<%--        #right{--%>
+<%--            width: 70%;--%>
+<%--            float: right;--%>
+<%--            background-color: salmon;--%>
+<%--        }--%>
+<%--    </style>--%>
 </head>
 <body>
-<div id="left">
-    <p>
-        <a href="/backed/index/home">回到首页</a>
-    </p>
-    <h1>欢迎${user.data.username}登录管理后台</h1>
-    <a href="/backed/product/getall">获取所有商品数据</a>
-</div>
+<%--<div id="left">--%>
+<%--    <p>--%>
+<%--        <a href="/backed/index/home">回到首页</a>--%>
+<%--    </p>--%>
+<%--    <h1>欢迎${user.data.username}登录管理后台</h1>--%>
+<%--    <a href="/backed/product/getall">获取所有商品数据</a>--%>
+<%--</div>--%>
 <div id="right">
+
+    <form action="/backed/product/fuzzysearch" >
+        <input type="text" placeholder="查询的商品名称" name="key">
+        <input type="submit" value="查询">
+    </form>
+
     <c:if test="${not empty plist.data}">
         <table>
             <tr>

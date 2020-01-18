@@ -4,6 +4,7 @@ import com.fs.common.ResponseCode;
 import com.fs.dao.ProductDao;
 import com.fs.pojo.Product;
 import com.fs.service.ProductService;
+import com.mysql.cj.util.StringUtils;
 
 import java.util.List;
 
@@ -40,5 +41,43 @@ public class ProductServiceImpl implements ProductService {
             return ResponseCode.toDefeated("商品下架失败!");
         }
         return ResponseCode.toSuccess(i2);
+    }
+
+
+    //商品模糊搜索
+    @Override
+    public ResponseCode fuzzySearch(String key) {
+        if(StringUtils.isNullOrEmpty(key)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+
+        String keyWord = "%" + key + "%";
+        List<Product> li = productDao.selectByPname(keyWord);
+        return ResponseCode.toSuccess(li);
+    }
+
+    @Override
+    public ResponseCode addOne(String pname, String pnum, String price) {
+        //参数非空判断
+        if(pname == null || "".equals(pname)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+        if(pnum == null || "".equals(pnum)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+        if(price == null || "".equals(price)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+        //根据商品名称查询是否存在
+        Product p = productDao.selectOneByPname(pname);
+        if(p != null){
+            return ResponseCode.toDefeated("商品已存在");
+        }
+
+        Double d = Double.parseDouble(price);
+        Integer m = Integer.parseInt(pname);
+        //当商品不存在的时候再新增
+        productDao.insertOne(pname,price,pnum);
+        return ResponseCode.toSuccess(i);
     }
 }

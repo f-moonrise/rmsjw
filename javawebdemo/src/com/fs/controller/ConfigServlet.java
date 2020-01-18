@@ -26,10 +26,17 @@ public class ConfigServlet extends HttpServlet {
             case "home":
                 home(request, response);
                 break;
+            case "addProduct":
+                addProduct(request, response);
+                break;
         }
     }
 
     private void home(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/home.jsp").forward(request,response);
+    }
+
+    private void addProduct(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/addproduct.jsp").forward(request,response);
     }
 }
