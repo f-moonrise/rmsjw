@@ -6,6 +6,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -57,6 +58,30 @@ public class ProductDao {
         try{
             query = qr.query(sql, new BeanListHandler<Product>(Product.class),key);
         }catch (Exception e){
+            e.printStackTrace();
+        }
+        return query;
+    }
+
+    public int insertOne(String pname, Double d, Integer m) {
+        QueryRunner qr = new QueryRunner(C3P0Util.getCom());
+        String sql = "insert into neuedu_product values(null,?,?,?,0,now(),now())";
+        int n = 0;
+        try{
+            n = qr.update(sql, pname,d,m);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return n;
+    }
+
+    public Product selectOneByPname(String pname) {
+        QueryRunner qr = new QueryRunner(C3P0Util.getCom());
+        String sql = "select id,pname,price,pnum,type,create_time,update_time from neuedu_product where pname = ?";
+        Product query = null;
+        try{
+            query = qr.query(sql, new BeanHandler<Product>(Product.class),pname);
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return query;

@@ -16,7 +16,7 @@
         <input type="text" placeholder="商品名称" name="pname">
         <input type="text" placeholder="商品价格" name="price">
         <input type="number" placeholder="商品库存" name="pnum">
-        <input type="submit">新增</input>
+        <input type="submit" value="新增">
     </form>
 </body>
 </html>

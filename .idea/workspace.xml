@@ -7,28 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84cfc732-0bf9-41a6-a627-b68c3684da24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/addproduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/left.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javawebdemo/src/com/fs/controller/ConfigServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/controller/ConfigServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javawebdemo/src/com/fs/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/controller/ProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javawebdemo/src/com/fs/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/src/com/fs/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/plist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/plist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/controller/ConfigServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/controller/ConfigServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/controller/ProductServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/classes/com/fs/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/plist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javawebdemo_war_exploded/WEB-INF/plist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/controller/ConfigServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/controller/ConfigServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/controller/ProductServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javawebdemo/com/fs/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/addproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/javawebdemo/web/WEB-INF/addproduct.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +57,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.23244782" />
     <property name="project.structure.side.proportion" value="0.30535454" />
@@ -219,7 +202,8 @@
       <workItem from="1579047679723" duration="17411000" />
       <workItem from="1579097470521" duration="3201000" />
       <workItem from="1579134784690" duration="9531000" />
-      <workItem from="1579309418847" duration="10302000" />
+      <workItem from="1579309418847" duration="10592000" />
+      <workItem from="1579392692777" duration="2587000" />
     </task>
     <servers />
   </component>

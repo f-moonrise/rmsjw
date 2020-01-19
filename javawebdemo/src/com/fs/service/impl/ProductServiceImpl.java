@@ -77,7 +77,7 @@ public class ProductServiceImpl implements ProductService {
         Double d = Double.parseDouble(price);
         Integer m = Integer.parseInt(pname);
         //当商品不存在的时候再新增
-        productDao.insertOne(pname,price,pnum);
+        int i = productDao.insertOne(pname,d,m);
         return ResponseCode.toSuccess(i);
     }
 }
