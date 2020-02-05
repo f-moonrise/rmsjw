@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+
+    <bean id="users" class="pojo.Users">
+        <property name="username" value="asd"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+
+    <bean id="users1" class="pojo.Users">
+        <constructor-arg name="username" value="qwe"></constructor-arg>
+        <constructor-arg name="password" value="123456"></constructor-arg>
+    </bean>
+</beans>
