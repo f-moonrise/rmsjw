@@ -26,7 +26,7 @@ public class FullFilter implements Filter {
         String requestURI = ((HttpServletRequest) request).getRequestURI();
         String[] split = requestURI.split("/");
 
-        if ("login".equals(split[split.length-1])){
+        if ("login".equals(split[split.length-1])||"register".equals(split[split.length-1])){
             //登录页面直接放行
             chain.doFilter(request, response);
         }else {

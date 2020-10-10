@@ -45,6 +45,8 @@ public class ProductServlet extends HttpServlet {
             case "addone":
                 addOne(request,response);
                 break;
+            case "delone":
+                delOne(request,response);
         }
     }
 
@@ -77,6 +79,16 @@ public class ProductServlet extends HttpServlet {
         String price = request.getParameter("price");
         String pnum = request.getParameter("pnum");
         ResponseCode allProduct = productService.addOne(pname,pnum,price);
-        request.getRequestDispatcher("/WEB-INF/plist.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/addproduct.jsp").forward(request,response);
+    }
+
+    //删除商品
+    private void delOne(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        String pname = request.getParameter("pname");
+        String price = request.getParameter("price");
+        String pnum = request.getParameter("pnum");
+//        System.out.println(pname+price+pnum);
+        ResponseCode allProduct = productService.delOne(pname,pnum,price);
+        request.getRequestDispatcher("/WEB-INF/delproduct.jsp").forward(request,response);
     }
 }

@@ -16,4 +16,6 @@ public interface ProductService {
     ResponseCode fuzzySearch(String key);
 
     ResponseCode addOne(String pname, String pnum, String price);
+
+    ResponseCode delOne(String pname, String pnum, String price);
 }

@@ -86,4 +86,18 @@ public class ProductDao {
         }
         return query;
     }
+
+    public int delOne(String pname, Double d, Integer m) {
+        QueryRunner qr = new QueryRunner(C3P0Util.getCom());
+//        System.out.println(pname+d+m);
+        String sql = "DELETE from neuedu_product where pname = ?";
+        int query = 0;
+        try{
+            query = qr.execute(sql,pname);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+//        System.out.println(query);
+        return query;
+    }
 }

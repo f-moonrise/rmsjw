@@ -75,9 +75,35 @@ public class ProductServiceImpl implements ProductService {
         }
 
         Double d = Double.parseDouble(price);
-        Integer m = Integer.parseInt(pname);
+        Integer m = Integer.parseInt(pnum);
         //当商品不存在的时候再新增
         int i = productDao.insertOne(pname,d,m);
+        return ResponseCode.toSuccess(i);
+    }
+
+    @Override
+    public ResponseCode delOne(String pname, String pnum, String price) {
+        //参数非空判断
+        if(pname == null || "".equals(pname)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+        if(pnum == null || "".equals(pnum)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+        if(price == null || "".equals(price)){
+            return ResponseCode.toDefeated("非法参数");
+        }
+        //根据商品名称查询是否存在
+        Product p = productDao.selectOneByPname(pname);
+        if(p == null){
+            return ResponseCode.toDefeated("商品不存在");
+        }
+
+//        System.out.println(pname+price+pnum);
+        Double d = Double.parseDouble(price);
+        Integer m = Integer.parseInt(pnum);
+        //当商品存在的时候删除
+        int i = productDao.delOne(pname,d,m);
         return ResponseCode.toSuccess(i);
     }
 }

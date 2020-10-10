@@ -11,73 +11,148 @@
 <html>
 <head>
     <title>商品列表</title>
-<%--    <style>--%>
-<%--        #left{--%>
-<%--            width: 30%;--%>
-<%--            height: 100%;--%>
-<%--            float: left;--%>
-<%--            background-color: seagreen;--%>
-<%--        }--%>
-<%--        #right{--%>
-<%--            width: 70%;--%>
-<%--            float: right;--%>
-<%--            background-color: salmon;--%>
-<%--        }--%>
-<%--    </style>--%>
-</head>
-<body>
-<%--<div id="left">--%>
-<%--    <p>--%>
-<%--        <a href="/backed/index/home">回到首页</a>--%>
-<%--    </p>--%>
-<%--    <h1>欢迎${user.data.username}登录管理后台</h1>--%>
-<%--    <a href="/backed/product/getall">获取所有商品数据</a>--%>
-<%--</div>--%>
-<div id="right">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 
+<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">--%>
+
+    <style>
+        #left{
+            width: 20%;
+            height: 94.7%;
+            float: left;
+            background-color: seagreen;
+        }
+
+        #top{
+            width: 100%;
+            height:40px;
+            background-color: #009688;
+        }
+
+        #top span a{
+            margin-top: 8px;
+            margin-right: 15px;
+            float: right;
+            color: white;
+        }
+
+        #le-2{
+            margin-top: -20px;
+            width: 100%;
+            padding-top: 4%;
+            padding-left: 3%;
+            /*height: 100px;*/
+            /*background-color: white;*/
+        }
+        #le-2 h1{
+
+        }
+
+        #le-3{
+            width: 100%;
+            height: 600px;
+            background-color: salmon;
+        }
+
+        .le-3{
+            width: 100%;
+            height: 80px;
+            background-color: salmon;
+            font-size: 32px;
+        }
+
+        .le-4{
+            width: 100%;
+            height: 60px;
+            background-color: salmon;
+            font-size: 28px;
+        }
+
+        .fs-xa{
+            float: right;
+            margin-top: 50px;
+            margin-right: 200px ;
+        }
+
+        .fs-xb{
+            float: right;
+            margin-top: 50px;
+            margin-right: 550px;
+        }
+
+        .fs-xc{
+            position: absolute;
+            margin-top: 45px;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body >
+<div id="right">
+    <div class="fs-xc">
+<%--        <a >增加商品</a>--%>
+        <a href="/backed/index/addproduct"><button type="button" class="btn btn-primary">增加商品</button></a>
+    <a href="${pageContext.request.contextPath}/backed/product/delone"><button type="button" class="btn btn-primary">删除商品</button></a>
+    </div>
+
+    <div class="fs-xb">
     <form action="/backed/product/fuzzysearch" >
         <input type="text" placeholder="查询的商品名称" name="key">
         <input type="submit" value="查询">
     </form>
-
+    </div>
     <c:if test="${not empty plist.data}">
-        <table>
+        <div class="fs-xa" >
+        <table class="table table-bordered">
             <tr>
-                <th>序号</th>
-                <th>商品名称</th>
-                <th>商品价格</th>
-                <th>商品库存</th>
-                <th>商品在售</th>
-                <th>商品创建时间</th>
-                <th>商品更新时间</th>
+                <th scope="col">序号</th>
+                <th scope="col">商品名称</th>
+                <th scope="col">商品价格</th>
+                <th scope="col">商品库存</th>
+                <th scope="col">商品在售</th>
+                <th scope="col">商品创建时间</th>
+                <th scope="col">商品更新时间</th>
+                <th scope="col">操作</th>
             </tr>
             <c:forEach items="${plist.data}" var="p">
                 <tr>
                     <td>${p.id}</td>
                     <td>${p.pname}</td>
                     <td>${p.price}</td>
-                    <td>${p.pnum}</td>
+                    <td class="pn">${p.pnum}
+<%--                        <button onclick="toType2(this)">+</button>--%>
+<%--                        <button onclick="toType3(this)">—</button>--%>
+                    </td>
                     <td class="pt">${p.type}</td>
                     <td>${p.create_time}</td>
                     <td>${p.update_time}</td>
                     <td>
                         <button onclick="toType(this)">下架</button>
-                        <button>修改</button>
+                        <button onclick="toType1(this)">上架</button>
+<%--                        <button onclick="toType2(this)">修改</button>--%>
                     </td>
                 </tr>
             </c:forEach>
         </table>
+        </div>
     </c:if>
 
     <c:if test="${empty plist.data}">
         没有更多的商品
     </c:if>
 </div>
+
+
+
 </body>
 <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+
+
+
+
 <script>
     function toType(but) {
-
         var id2 = $(but).parent().parent().children().first().text();
         $.get(
             "/backed/product/totype",
@@ -90,6 +165,50 @@
             }
         )
     }
+
+    function toType1(but) {
+        var id2 = $(but).parent().parent().children().first().text();
+        $.get(
+            "/backed/product/totype",
+            {id:id2},
+            function (data) {
+                var num = Number(data);
+                if(data>0){
+                    $(but).parent().parent().children().first().nextAll(".pt").text(0);
+                }
+            }
+        )
+    }
+
+    function toType2(but) {
+        var id2 = $(but).parent().parent().children().first().text();
+        $.get(
+            "/backed/product/totype",
+            {id:id2},
+            function (data) {
+                var num = Number(data);
+                if(data>0){
+                    $(but).parent().parent().children().first().nextAll(".pn").text(data+1);
+                }
+            }
+        )
+    }
+
+    function toType3(but) {
+        var id2 = $(but).parent().parent().children().first().text();
+        $.get(
+            "/backed/product/totype",
+            {id:id2},
+            function (data) {
+                var num = Number(data);
+                if(data>0){
+                    $(but).parent().parent().children().first().nextAll(".pn").text(data-1);
+                }
+            }
+        )
+    }
+
+
 </script>
 
 </html>

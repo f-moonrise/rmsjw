@@ -13,6 +13,8 @@
     <title>商品列表</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 
+<%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">--%>
+
     <style>
         #left{
             width: 20%;
@@ -77,10 +79,22 @@
             margin-top: 50px;
             margin-right: 550px;
         }
+
+        .fs-xc{
+            position: absolute;
+            margin-top: 45px;
+            margin-left: 450px;
+        }
     </style>
 </head>
 <body >
 <div id="right">
+    <div class="fs-xc">
+<%--        <a >增加商品</a>--%>
+        <a href="/backed/index/addproduct"><button type="button" class="btn btn-primary">增加商品</button></a>
+    <a href="${pageContext.request.contextPath}/backed/product/delone"><button type="button" class="btn btn-primary">删除商品</button></a>
+    </div>
+
     <div class="fs-xb">
     <form action="/backed/product/fuzzysearch" >
         <input type="text" placeholder="查询的商品名称" name="key">
@@ -105,13 +119,17 @@
                     <td>${p.id}</td>
                     <td>${p.pname}</td>
                     <td>${p.price}</td>
-                    <td>${p.pnum}</td>
+                    <td class="pn">${p.pnum}
+<%--                        <button onclick="toType2(this)">+</button>--%>
+<%--                        <button onclick="toType3(this)">—</button>--%>
+                    </td>
                     <td class="pt">${p.type}</td>
                     <td>${p.create_time}</td>
                     <td>${p.update_time}</td>
                     <td>
                         <button onclick="toType(this)">下架</button>
-                        <button>修改</button>
+                        <button onclick="toType1(this)">上架</button>
+<%--                        <button onclick="toType2(this)">修改</button>--%>
                     </td>
                 </tr>
             </c:forEach>
@@ -143,6 +161,48 @@
                 var num = Number(data);
                 if(data>0){
                     $(but).parent().parent().children().first().nextAll(".pt").text(1);
+                }
+            }
+        )
+    }
+
+    function toType1(but) {
+        var id2 = $(but).parent().parent().children().first().text();
+        $.get(
+            "/backed/product/totype",
+            {id:id2},
+            function (data) {
+                var num = Number(data);
+                if(data>0){
+                    $(but).parent().parent().children().first().nextAll(".pt").text(0);
+                }
+            }
+        )
+    }
+
+    function toType2(but) {
+        var id2 = $(but).parent().parent().children().first().text();
+        $.get(
+            "/backed/product/totype",
+            {id:id2},
+            function (data) {
+                var num = Number(data);
+                if(data>0){
+                    $(but).parent().parent().children().first().nextAll(".pn").text(data+1);
+                }
+            }
+        )
+    }
+
+    function toType3(but) {
+        var id2 = $(but).parent().parent().children().first().text();
+        $.get(
+            "/backed/product/totype",
+            {id:id2},
+            function (data) {
+                var num = Number(data);
+                if(data>0){
+                    $(but).parent().parent().children().first().nextAll(".pn").text(data-1);
                 }
             }
         )

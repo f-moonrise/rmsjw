@@ -13,4 +13,6 @@ import java.util.List;
 public interface UserService {
 
     ResponseCode<Users> login(String username,String password);
+
+    ResponseCode<Users> register(String username, String password);
 }

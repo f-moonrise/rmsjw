@@ -5,6 +5,8 @@ import com.fs.utils.C3P0Util;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
+import java.sql.SQLException;
+
 /**
  * @author zangye03@gmail.com
  * @date 2020/1/14 19:07
@@ -23,5 +25,17 @@ public class UserDao {
             e.printStackTrace();
         }
         return u;
+    }
+
+    public int insertByUserNameAndPassword(String username, String password) {
+        QueryRunner qr = new QueryRunner(C3P0Util.getCom());
+        String sql = "insert into neuedu_user values(null,?,?,1,now(),now())";
+        int n = 0;
+        try{
+            n = qr.update(sql, username,password);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return n;
     }
 }
